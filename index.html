@@ -1,22 +1,25 @@
 <!DOCTYPE html>
     <html>
         <head>
-            <title>Portfolio de SaYko</title>
+            <title>SaYko | Portfolio</title>
             <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
             <link rel="stylesheet" href="styles.css" />
+            <link rel="icon" type="image/png" href="Assets/img/SK logo.png">
         </head>
 
         <body>
             <div class="Container">
-
                 <header>
-                    <h1 class="WSLogo">SaYko's Portfolio</h1>
+                    <img class="WSLogo" src="Assets/img/SaYko's PP.png">
                     <!-- Navigateur -->
                     <nav class="navig">
                         <ul>
-                            <li><a href="#aboutMe">About Me</a></li>
+                            <li><a href="#aboutMe">Présentation</a></li>
                             <li><a href="#MesTravaux">Travaux</a></li>
+                            <li><a href="Compétences.html">Compétences</a></li>
                             <li><a href="#ContactezMoi">Contact</a></li>
+                            <!-- <li><a href="FAQ.html">FAQ</a></li> -->
                         </ul>
                     </nav>
                 </header>
@@ -35,17 +38,17 @@
                     </div>
                     <img class="heroImg" src="Assets/svg/Hero.svg" alt="hero image" />
                 </section>
-                <!-- Section About Me -->
+                <!-- Section Présentation -->
                 <section class="aboutMe" id="aboutMe">
                     <img src="Assets/svg/AboutMe.svg" alt="about me" class="aboutMeImg">
                     <div class="textContainer">
                         <div class="textTitle">
-                            <h1 class="aboutName">About</h1>
-                            <h1 class="aboutTitle">Me</h1>
+                            <h1 class="aboutName">Présen</h1>
+                            <h1 class="aboutTitle">tation</h1>
                             <img src="Assets/svg/lightbulb.svg" alt="light" class="light">
                         </div>
                         <p class="aboutMePar">
-                        Je suis SaYko, développeur web et jeux vidéo avec 1 an d’expérience. Sérieux, autonome et en constante progression, je m’investis pleinement pour livrer un travail propre et efficace. Je travaille actuellement sur *Mages' Legacy*, un RPG Roblox inspiré de Black Clover, ce qui renforce mes compétences en développement et gestion de projet. Fiable et à l’écoute, je suis prêt à transformer vos idées en projets concrets.
+                        Je suis SaYko, développeur web et jeux vidéo avec 1 an d’expérience. Sérieux, autonome et en constante progression, je m’investis pleinement pour livrer un travail propre et efficace. Je travaille actuellement sur <a class="pLink" href="Travaux/Mages Legacy.html" target="_blank">Mages' Legacy</a>, un RPG <a class="pLink" href="https://en.wikipedia.org/wiki/Roblox_Corporation" target="_blank">Roblox</a> inspiré de <a class="pLink" href="https://en.wikipedia.org/wiki/Black_Clover" target="_blank">Black Clover</a>, ce qui renforce mes compétences en développement et gestion de projet. Fiable et à l’écoute, je suis prêt à transformer vos idées en projets concrets.
                         </p>
                     </div>
                 </section>
@@ -54,14 +57,13 @@
                 <section class="works" id="MesTravaux">
                     <div class="worksContainer">
                         <div class="projectTitle">
-                            <h1 class="aboutName">Mes Travaux </h1>
+                            <h1 class="aboutName">Mes Travaux</h1>
                             <h1 class="aboutTitle"> Récents</h1>
                         </div>
                         <ul>
-                            <!-- Dans les href mettre les liens des travaux -->
-                            <!-- Dupliquer une <li> pour ajouter du contenu -->
+                            <!-- <li> pour ajouter du contenu -->
                             <li>
-                                <a href="https://www.roblox.com/fr/games/107363146401193/Mages-Legacy" target="_blank"> <img src="Assets/img/Mages' Legacy.png" alt="Loading..."> </a>
+                                <a href="Travaux/Mages Legacy.html" target="_blank"> <img src="Assets/img/Mages' Legacy.png" alt="Loading..."> </a>
                             </li>
 
                         </ul>
@@ -79,21 +81,18 @@
                         <div class="MailetTel">
                             <img src="Assets/svg/Email.svg" alt="Email logo">
                             <a href="mailto:saikosx25@gmail.com" target="_blank">
-                                <h3>saikosx25@gmail.com</h3>
+                                <h3 class="MailTo">saikosx25@gmail.com</h3>
                             </a>
                         </div>
                         <div class="MailetTel">
                             <img src="Assets/svg/phone.svg" alt="Tel logo">
-                            <h3>+33 (0) 6 50 50 78 71</h3>
+                            <h3>+33 (0) 6 05 90 79 10</h3>
                         </div>
                     </div>
 
                     <div class="socialMedia">
                         <a href="https://x.com/SaYkoDev" target="_blank">
                             <img src="Assets/svg/twitter.svg" alt="Twitter/X link">
-                        </a>
-                        <a href="https://github.com" target="_blank">
-                            <img src="Assets/svg/github.svg" alt="github link">
                         </a>
                     </div>
                 </section>

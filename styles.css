@@ -39,10 +39,11 @@ header{
 
 .navig a:hover{
     color: aqua;
+    text-decoration: underline;
 }
 
 .WSLogo{
-    height: 100px;
+    height: 150px;
     width: auto;
     margin-top: 2rem;
     color: aqua;
@@ -142,6 +143,15 @@ hr{opacity: 10%;}
     color: whitesmoke;
 }
 
+.pLink{
+    text-decoration: none;
+    color: aqua;
+}
+.pLink:hover{
+    text-decoration: underline;
+    color: wheat;
+}
+
 .works{
     background-image: url(Assets/svg/background.svg);
     padding: 10rem 10rem;
@@ -231,6 +241,11 @@ hr{opacity: 10%;}
     gap: 5px;
 }
 
+.MailTo:hover{
+    color: aqua;
+    text-decoration: underline;
+}
+
 .socialMedia{
      display: flex;
     align-items: center;
@@ -258,7 +273,6 @@ footer{
 }
 
 /* Dimentions Tel */
-
 @media (max-width: 1023px) {
   header {
     margin-left: 1rem;
@@ -326,7 +340,7 @@ footer{
 
 /* ======================================================= COMMANDES ======================================================== */
 
-.CMDStatus {
+.CMDStatusClosed {
     background-color: red;
     color: white;
     border-radius: 24px;
@@ -335,4 +349,80 @@ footer{
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
     position: relative;
     top: 15px;
+}
+
+.CMDStatusOppened {
+    background-color: lawngreen;
+    color: white;
+    border-radius: 24px;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    top: 15px;
+}
+
+.CMDStatusOppened:hover {
+    background-color: whitesmoke;
+    color: lawngreen;
+}
+
+/* ======================================================= COMPETENCES ======================================================== */
+.CPsub{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 18rem;
+}
+
+.CPSubTitle1{
+    font-size: 3rem;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.CPSubTitle2{
+    font-size: 3rem;
+    color: whitesmoke;
+    text-align: center;
+    margin-left: 3em;
+}
+
+.CPLangDiv{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-left: 18rem;
+}
+
+.CPLangImage{
+    width: 14rem;
+    height: 10rem;
+    object-fit: contain;
+    transition: transform 0.2s;
+}
+
+.CPLangLink :hover {
+    transform: scale(1.35);
+}
+
+
+/* ======================================================= PROJETS ======================================================== */
+
+.StatusProj{
+    margin-top: 5rem;
+    color: whitesmoke;
+    text-align: justify;
+    margin-bottom: .8rem;
+}
+
+.ProjectDescriptionTitle {
+    color: whitesmoke;
+    text-align: justify;
+    margin-bottom: .8rem;
+}
+
+.ProjectDescriptionPar {
+    color: whitesmoke;
+    text-align: justify;
 }
