@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+/* ======================================================= MAIN ======================================================== */
+
+/* Reset All Tags Params */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", serif;
+}
+
+body{background-color: #222831;}
+
+header{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 2rem auto;
+   max-width: 1200px; 
+}
+
+.HeaderTitle{
+    color: white;
+    font-size:xx-large;
+}
+
+.navig ul{
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+}
+
+.navig a{
+    text-decoration: none;
+    color: white;
+}
+
+.navig a:hover{
+    color: aqua;
+    text-decoration: underline;
+}
+
+.WSLogo{
+    height: 150px;
+    width: auto;
+    margin-top: 2rem;
+    color: aqua;
+}
+
+hr{opacity: 10%;}
+
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5rem auto;
+    max-width: 1200px;
+}
+
+.arrow{
+    position: absolute;
+    transform: translateX(-5.5rem) translateY(1.5rem);
+}
+
+.heroSub{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.name{
+    font-size: 3rem;
+    color: white;
+}
+
+.title{
+    font-size: 4rem;
+    color: aqua;
+}
+
+.ContactBT{
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 24px;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    top: 15px;
+}
+
+.ComandBT {
+    background-color: aqua;
+    color: white;
+    border-radius: 24px;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    top: 15px;
+    left: 1rem;
+}
+
+.ContactBT:hover{
+    background-color: azure;
+    color: aqua;
+    text-shadow: none;
+}
+
+.ComandBT:hover{
+    background-color: azure;
+    color: cornflowerblue;
+    text-shadow: none;
+}
+
+.aboutMe{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5rem auto;
+    max-width: 1200px;
+    gap: 10rem;
+}
+
+.textContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.textTitle{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 2rem;
+}
+
+.aboutName{ color: white;}
+.aboutTitle{color: aqua;}
+.aboutMePar{
+    text-align: justify;
+    color: whitesmoke;
+}
+
+.pLink{
+    text-decoration: none;
+    color: aqua;
+}
+.pLink:hover{
+    text-decoration: underline;
+    color: wheat;
+}
+
+.works{
+    background-image: url(Assets/svg/background.svg);
+    padding: 10rem 10rem;
+    margin: 5rem 0rem;
+}
+
+.worksContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    margin: 5rem auto;
+    max-width: 1200px;
+}
+
+.projectTitle{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 5px;
+    font-size: 2rem;
+}
+
+.works ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.works li{
+    border-radius: 16px;
+    background-color: rgba(57, 62, 70, 0.5);
+    backdrop-filter: blur(4px);
+    padding: 1rem 4rem;
+}
+
+.works li img{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    transition: transform 0.2s;
+}
+
+.works li :hover {
+    transform: scale(1.35);
+}
+
+.contactContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.contactTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5rem;
+    gap: 20rem;
+}
+
+.contact h3, .contact a {
+    color: white;
+    text-decoration: none;
+}
+
+.MailetTel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.MailTo:hover{
+    color: aqua;
+    text-decoration: underline;
+}
+
+.socialMedia{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+.socialMedia a{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px; /*Arrondir l'îcone*/
+    background-color: rgba(57, 62, 70, 0.5);
+    backdrop-filter: blur(4px);
+    padding: 1rem;
+}
+.socialMedia img{
+    width: 24px;
+    height: 24px;
+}
+
+footer{
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Dimentions Tel */
+@media (max-width: 1023px) {
+  header {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .heroImg {
+    width: 400px;
+  }
+  .name,
+  .title {
+    font-size: 2rem;
+  }
+  .arrow {
+    display: none;
+  }
+  .aboutMe {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2rem;
+  }
+  .textContainer {
+    align-items: center;
+    margin: 0rem 5rem;
+    gap: 1rem;
+  }
+  .aboutName,
+  .aboutTitle {
+    font-size: 2rem;
+  }
+  .light {
+    width: 60px;
+  }
+  .aboutMeImg {
+    width: 400px;
+  }
+  .works {
+    padding: 0;
+  }
+  .worksContainer {
+    padding: 5rem 0rem;
+    gap: 3rem;
+  }
+  .projectTitle {
+    margin-left: 1rem;
+  }
+  .works ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .contactContainer {
+    margin: 10rem 5rem;
+    gap: 2rem;
+  }
+  .contact {
+    flex-direction: column;
+    gap: 1rem;
+    margin-right: 0;
+  }
+}
+
+/* ======================================================= COMMANDES ======================================================== */
+
+.CMDStatusClosed {
+    background-color: red;
+    color: white;
+    border-radius: 24px;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    top: 15px;
+}
+
+.CMDStatusOppened {
+    background-color: lawngreen;
+    color: white;
+    border-radius: 24px;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    top: 15px;
+}
+
+.CMDStatusOppened:hover {
+    background-color: whitesmoke;
+    color: lawngreen;
+}
+
+/* ======================================================= COMPETENCES ======================================================== */
+.CPsub{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 18rem;
+}
+
+.CPSubTitle1{
+    font-size: 3rem;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.CPSubTitle2{
+    font-size: 3rem;
+    color: whitesmoke;
+    text-align: center;
+    margin-left: 3em;
+}
+
+.CPLangDiv{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-left: 18rem;
+}
+
+.CPLangImage{
+    width: 14rem;
+    height: 10rem;
+    object-fit: contain;
+    transition: transform 0.2s;
+}
+
+.CPLangLink :hover {
+    transform: scale(1.35);
+}
+
+
+/* ======================================================= PROJETS ======================================================== */
+
+.StatusProj{
+    margin-top: 5rem;
+    color: whitesmoke;
+    text-align: justify;
+    margin-bottom: .8rem;
+}
+
+.ProjectDescriptionTitle {
+    color: whitesmoke;
+    text-align: justify;
+    margin-bottom: .8rem;
+}
+
+.ProjectDescriptionPar {
+    color: whitesmoke;
+    text-align: justify;
+}
