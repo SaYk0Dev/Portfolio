@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | SaYko</title>
+  <link rel="icon" type="image/png" href="Assets/img/SK logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">SaYko</a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="navig" id="menu" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html#presentation">Présentation</a></li>
+          <li><a href="index.html#travaux">Travaux</a></li>
+          <li><a href="index.html#langages">Langages</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-intro container">
+      <h1 id="page-titre">Parlons de votre projet</h1>
+      <p class="lead" id="page-lead">Décrivez votre besoin, je reviens vers vous par le moyen de contact que vous choisissez.</p>
+    </section>
+
+    <section class="form-block container">
+      <!-- Message affiché quand les commandes sont fermées -->
+      <div class="closed-msg" id="fermees" hidden>
+        <p>Les commandes sont fermées pour le moment. Pour toute question, écrivez-moi directement à <a href="mailto:saiko.buisness@gmail.com">saiko.buisness@gmail.com</a>.</p>
+      </div>
+
+      <!-- Formulaire envoyé à Formspree -->
+      <form class="contact-form" id="demande" action="https://formspree.io/f/xoejzkyj" method="POST">
+
+        <!-- Champs techniques pour Formspree -->
+        <input type="hidden" name="_subject" value="Nouvelle demande de projet">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+
+        <div class="form-row">
+          <div class="field">
+            <label for="nom">Nom</label>
+            <input id="nom" name="nom" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="type">Type de projet</label>
+            <select id="type" name="type_projet" required>
+              <option value="" selected disabled>Choisir une option</option>
+              <option>Site web</option>
+              <option>Jeu Roblox</option>
+              <option>Autre</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="methode">Comment me contacter</label>
+            <select id="methode" name="methode" required>
+              <option value="mail" selected>Mail</option>
+              <option value="sms">SMS</option>
+              <option value="whatsapp">WhatsApp</option>
+              <option value="discord">Discord</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="coord" id="coord-label">Adresse email</label>
+            <input id="coord" name="email" type="email" placeholder="vous@exemple.com" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="message">Votre besoin</label>
+          <textarea id="message" name="message" rows="6" placeholder="Décrivez votre projet, vos objectifs et vos délais si vous en avez." required></textarea>
+        </div>
+
+        <!-- Vérification anti-spam : pas de name, donc pas envoyée à Formspree -->
+        <div class="field captcha">
+          <label for="captcha" id="captcha-label">Anti-spam : combien font 3 + 5 ?</label>
+          <input id="captcha" type="number" inputmode="numeric" autocomplete="off" required>
+          <p class="field-error" id="captcha-erreur" role="alert"></p>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Envoyer la demande</button>
+        <p class="form-status" id="statut" role="status"></p>
+      </form>
+    </section>
+
+    <!-- Confirmation avant envoi -->
+    <dialog class="confirm" id="confirmation" aria-labelledby="confirm-titre">
+      <h2 id="confirm-titre">Envoyer votre demande ?</h2>
+      <p>Vérifiez vos informations avant l'envoi.</p>
+      <div class="confirm-actions">
+        <button class="btn btn-ghost" type="button" id="annuler">Annuler</button>
+        <button class="btn btn-danger" type="button" id="confirmer">Confirmer</button>
+      </div>
+    </dialog>
+
+  </main>
+
+  <footer class="site-footer contact-footer">
+    <div class="container footer-inner">
+      <div>
+        <h2>Contactez-moi</h2>
+        <a class="mail" href="mailto:saiko.buisness@gmail.com">saiko.buisness@gmail.com</a>
+      </div>
+      <div class="footer-meta">
+        <p>© 2026 SaYko</p>
+        <ul class="socials">
+          <li><a href="https://x.com/SaYkoDev" target="_blank" rel="noopener">X (Twitter)</a></li>
+          <li><a href="https://github.com/SaYk0Dev" target="_blank" rel="noopener">GitHub</a></li>
+<li><a href="https://discord.com/users/1066790661820530728" target="_blank" rel="noopener">Discord</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+
+    function setMenu(open) {
+      menu.classList.toggle('is-open', open);
+      toggle.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+    }
+
+    toggle.addEventListener('click', () => {
+      setMenu(!menu.classList.contains('is-open'));
+    });
+
+    menu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => setMenu(false));
+    });
+
+    // Formulaire
+    const FORMULAIRE_URL = 'https://formspree.io/f/xoejzkyj';
+    const form = document.getElementById('demande');
+    const confirmation = document.getElementById('confirmation');
+    const methode = document.getElementById('methode');
+    const coord = document.getElementById('coord');
+    const coordLabel = document.getElementById('coord-label');
+    const statut = document.getElementById('statut');
+    const confirmer = document.getElementById('confirmer');
+    const captchaLabel = document.getElementById('captcha-label');
+    const captchaInput = document.getElementById('captcha');
+    const captchaErreur = document.getElementById('captcha-erreur');
+    let captchaReponse = 0;
+
+    const champs = {
+      mail: { label: 'Adresse email', type: 'email', placeholder: 'vous@exemple.com', nom: 'email' },
+      sms: { label: 'Numéro de téléphone', type: 'tel', placeholder: '+33 6 12 34 56 78', nom: 'telephone' },
+      whatsapp: { label: 'Numéro WhatsApp', type: 'tel', placeholder: '+33 6 12 34 56 78', nom: 'whatsapp' },
+      discord: { label: 'Identifiant Discord', type: 'text', placeholder: 'ex : pseudo', nom: 'discord' }
+    };
+
+    function majChamp() {
+      const c = champs[methode.value];
+      coordLabel.textContent = c.label;
+      coord.type = c.type;
+      coord.placeholder = c.placeholder;
+      coord.name = c.nom;
+    }
+
+    function nouveauCaptcha() {
+      const a = Math.floor(Math.random() * 9) + 1;
+      const b = Math.floor(Math.random() * 9) + 1;
+      captchaReponse = a + b;
+      captchaLabel.textContent = `Anti-spam : combien font ${a} + ${b} ?`;
+      captchaInput.value = '';
+    }
+
+    methode.addEventListener('change', majChamp);
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      statut.textContent = '';
+      statut.classList.remove('is-error');
+
+      if (Number(captchaInput.value) !== captchaReponse) {
+        captchaErreur.textContent = 'Réponse incorrecte, essayez encore.';
+        nouveauCaptcha();
+        captchaInput.focus();
+        return;
+      }
+
+      captchaErreur.textContent = '';
+      confirmation.showModal();
+    });
+
+    document.getElementById('annuler').addEventListener('click', () => {
+      confirmation.close();
+    });
+
+    confirmer.addEventListener('click', async () => {
+      confirmation.close();
+      confirmer.disabled = true;
+      statut.classList.remove('is-error');
+      statut.textContent = 'Envoi en cours…';
+
+      try {
+        const reponse = await fetch(FORMULAIRE_URL, {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: new FormData(form)
+        });
+
+        if (!reponse.ok) {
+          throw new Error('Réponse ' + reponse.status);
+        }
+
+        form.reset();
+        majChamp();
+        nouveauCaptcha();
+        statut.textContent = 'Merci ! Votre demande a bien été envoyée.';
+      } catch (erreur) {
+        statut.classList.add('is-error');
+        statut.textContent = "L'envoi a échoué. Réessayez, ou écrivez-moi directement à saiko.buisness@gmail.com.";
+      } finally {
+        confirmer.disabled = false;
+      }
+    });
+
+    nouveauCaptcha();
+  </script>
+
+
+  <script src="config.js"></script>
+  <script>
+    if (!COMMANDES_OUVERTES) {
+      document.getElementById('page-titre').textContent = 'Commandes fermées';
+      document.getElementById('page-lead').textContent = "Je n'accepte pas de nouvelle demande pour le moment.";
+      document.getElementById('demande').hidden = true;
+      document.getElementById('fermees').hidden = false;
+    }
+  </script>
+
+</body>
+</html>
