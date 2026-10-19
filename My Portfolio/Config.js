@@ -1,1 +1,0 @@
-const COMMANDES_OUVERTES = false;
