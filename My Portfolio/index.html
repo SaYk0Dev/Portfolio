@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaYko | Portfolio</title>
+  <link rel="icon" type="image/png" href="Assets/img/SK logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#accueil">SaYko</a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="navig" id="menu" aria-label="Navigation principale">
+        <ul>
+          <li><a href="#presentation">Présentation</a></li>
+          <li><a href="#travaux">Travaux</a></li>
+          <li><a href="#langages">Langages</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Accueil -->
+    <section class="hero container" id="accueil">
+      <div>
+        <h1>Je suis<br><span class="name">SaYko</span></h1>
+        <p class="lead">Développeur web et jeux vidéo, avec un an d'expérience.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="contact.html">Contactez-moi</a>
+        </div>
+      </div>
+      <img class="hero-img" src="Assets/svg/Hero.svg" alt="Illustration de SaYko">
+    </section>
+
+    <!-- Présentation -->
+    <section class="section" id="presentation">
+      <div class="container split">
+        <h2>Présentation</h2>
+        <div>
+          <p class="body">Je suis SaYko, développeur web et jeux vidéo avec 1 an d'expérience. Sérieux, autonome et en constante progression, je m'investis pleinement pour livrer un travail propre et efficace. Je travaille actuellement sur <a href="https://www.roblox.com/games/107363146401193/Mages-Legacy" target="_blank" rel="noopener">Mages' Legacy</a>, un RPG <a href="https://en.wikipedia.org/wiki/Roblox_Corporation" target="_blank" rel="noopener">Roblox</a> inspiré de <a href="https://en.wikipedia.org/wiki/Black_Clover" target="_blank" rel="noopener">Black Clover</a>, ce qui renforce mes compétences en développement et gestion de projet. Fiable et à l'écoute, je suis prêt à transformer vos idées en projets concrets.</p>
+          <img class="about-img" src="Assets/svg/AboutMe.svg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!-- Travaux -->
+    <section class="works" id="travaux">
+      <div class="worksContainer">
+        <div class="projectTitle">
+          <h2 class="aboutName">Mes Travaux</h2>
+          <h2 class="aboutTitle">Récents</h2>
+        </div>
+        <ul>
+          <li>
+            <a href="https://www.roblox.com/games/107363146401193/Mages-Legacy" target="_blank" rel="noopener">
+              <img src="Assets/img/Mages' Legacy.png" alt="Mages' Legacy">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Langages -->
+    <section class="section" id="langages">
+      <div class="container split">
+        <h2>Langages que je connais</h2>
+        <div>
+          <ul class="langs">
+            <li>Python</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Lua (Luau)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="container cta-inner">
+        <div>
+          <h2 id="cta-titre">Un projet en tête ?</h2>
+          <p class="body" id="cta-texte">Site web, jeu Roblox ou fonctionnalité sur mesure : décrivez votre besoin, je m'occupe du reste.</p>
+        </div>
+        <a class="btn btn-primary" href="contact.html">Contactez-moi</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-meta">
+      <p>© 2026 SaYko</p>
+      <ul class="socials">
+        <li><a href="https://x.com/SaYkoDev" target="_blank" rel="noopener">X (Twitter)</a></li>
+        <li><a href="https://github.com/SaYk0Dev" target="_blank" rel="noopener">GitHub</a></li>
+<li><a href="https://discord.com/users/1066790661820530728" target="_blank" rel="noopener">Discord</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+
+    function setMenu(open) {
+      menu.classList.toggle('is-open', open);
+      toggle.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+    }
+
+    toggle.addEventListener('click', () => {
+      setMenu(!menu.classList.contains('is-open'));
+    });
+
+    menu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => setMenu(false));
+    });
+  </script>
+
+
+  <script src="config.js"></script>
+  <script>
+    if (!COMMANDES_OUVERTES) {
+      document.getElementById('cta-titre').textContent = 'Commandes fermées';
+      document.getElementById('cta-texte').textContent = "Je n'accepte pas de nouvelle demande pour le moment. Pour une question, écrivez-moi directement.";
+    }
+  </script>
+
+</body>
+</html>
