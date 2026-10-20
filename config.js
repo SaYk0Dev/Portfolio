@@ -1,1 +1,1 @@
-const COMMANDES_OUVERTES = false;
+const COMMANDES_OUVERTES = true;
